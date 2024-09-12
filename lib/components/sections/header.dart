@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:new_bank/themes/theme_colors.dart';
 
 class Header extends StatelessWidget {
   const Header({super.key});
@@ -6,15 +7,11 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration:  const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: <Color>[
-            Color.fromRGBO(103, 99, 234, 1.0),
-            Color.fromRGBO(155, 105, 254, 1.0),
-            Color.fromRGBO(195, 107, 255, 1.0)
-          ],
+          colors: ThemeColors.headerGradient,
         ),
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(15))
       ),

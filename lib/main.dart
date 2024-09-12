@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_bank/screens/home.dart';
+import 'package:new_bank/themes/my_theme.dart';
 
 void main() {
   runApp(const NewBank());
@@ -11,9 +12,10 @@ class NewBank extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
         title: 'NewBank',
-        home: Home(),
+        theme: MyTheme,
+        home: const Home(),
     );
   }
 }
