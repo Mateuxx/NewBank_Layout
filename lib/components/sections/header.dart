@@ -15,7 +15,7 @@ class Header extends StatelessWidget {
         ),
         borderRadius: BorderRadius.vertical(bottom: Radius.circular(15))
       ),
-      child: const Padding(
+      child:  Padding(
         padding: EdgeInsets.fromLTRB(16.0, 80.0, 16.0, 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -33,13 +33,12 @@ class Header extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: '\$',
-                    style: TextStyle(fontSize: 16),
                     children: <TextSpan>[
                       TextSpan(
                         text: '1000.00',
-                        style: TextStyle(
-                            fontSize: 28, fontWeight: FontWeight.bold),
-                      ),
+                        // para pegar do textLarge em textTheme por padrão
+                        //   ele usa os valores referentes ao bodyMedium
+                        style: Theme.of(context).textTheme.bodyLarge),
                     ],
                   ),
                 ),
